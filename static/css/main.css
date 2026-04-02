@@ -1,0 +1,217 @@
+/* fro simple nad basic design use this */
+
+/* body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+
+.content {
+    margin: 0 auto;
+    width : 400px;
+}
+
+table, td, th {
+    border : 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%;
+} */
+
+
+
+
+/* for advance css use this */
+
+:root {
+    --bg-start: #f4efe6;
+    --bg-end: #dfe8f3;
+    --panel: rgba(255, 255, 255, 0.88);
+    --panel-border: rgba(80, 95, 120, 0.16);
+    --text-main: #18212f;
+    --text-soft: #5b6678;
+    --accent: #c8643b;
+    --accent-dark: #9f4b2a;
+    --table-head: #203047;
+    --line: rgba(32, 48, 71, 0.12);
+    --shadow: 0 24px 60px rgba(31, 43, 61, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 35%),
+        linear-gradient(135deg, var(--bg-start), var(--bg-end));
+}
+
+.content {
+    width: min(920px, 100%);
+    padding: 40px;
+    border: 1px solid var(--panel-border);
+    border-radius: 28px;
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    letter-spacing: 0.04em;
+}
+
+.subtitle {
+    margin: 12px auto 28px;
+    max-width: 560px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-soft);
+}
+.form {
+    margin-top: 20px;
+}
+
+.task-form {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.task-form input[type="text"] {
+    width: min(460px, 100%);
+    padding: 14px 18px;
+    border: 1px solid rgba(32, 48, 71, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    font-size: 1rem;
+    color: var(--text-main);
+    outline: none;
+}
+
+.task-form input[type="text"]:focus {
+    border-color: rgba(200, 100, 59, 0.65);
+    box-shadow: 0 0 0 4px rgba(200, 100, 59, 0.12);
+}
+
+.task-form input[type="submit"] {
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 14px 24px rgba(159, 75, 42, 0.22);
+}
+
+.task-form input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 28px rgba(159, 75, 42, 0.28);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+}
+
+th,
+td {
+    padding: 18px 16px;
+    text-align: center;
+}
+
+th {
+    background: var(--table-head);
+    color: #fff;
+    font-size: 0.92rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+td {
+    border-bottom: 1px solid var(--line);
+    font-size: 1rem;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+td a {
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+.empty-state {
+    color: var(--text-soft);
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .content {
+        padding: 28px 18px;
+        border-radius: 20px;
+    }
+
+    th,
+    td {
+        padding: 14px 10px;
+        font-size: 0.95rem;
+    }
+
+    .task-form input[type="text"],
+    .task-form input[type="submit"] {
+        width: 100%;
+    }
+}
