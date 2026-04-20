@@ -7,7 +7,7 @@ A simple and efficient task management web application built using Flask. It all
 - Flask
 - HTML, CSS (Jinja Templates)
 
-📌 Features
+## Features
 Create new tasks
 
 View all tasks
@@ -28,19 +28,19 @@ cd task-master
 pip install -r requirements.txt
 python app.py
 
-Usage
+## Usage
 
 Open your browser and go to:
 http://127.0.0.1:5000
 
-Author
+## Author
 
 Ahrar Ahmad
 
 
 ---
 
-# ✅ After pasting
+## After pasting
 Run:
 ```bash
 git add README.md
