@@ -8,42 +8,33 @@ A simple and efficient task management web application built using Flask. It all
 - HTML, CSS (Jinja Templates)
 
 ## Features
-Create new tasks
-
-View all tasks
-
-Update task status
-
-Delete tasks
-
-Simple and responsive UI using HTML templates
-
-Lightweight Flask backend
+- Create new tasks
+- View all tasks
+- Update task status
+- Delete tasks
+- Simple and responsive UI
+- Lightweight Flask backend
 
 ## Setup
-
 ```bash
 git clone https://github.com/Ahrar-1898/task-master.git
 cd task-master
 pip install -r requirements.txt
 python app.py
 
-## Usage
+Usage
 
 Open your browser and go to:
 http://127.0.0.1:5000
 
-## Author
+Author
 
 Ahrar Ahmad
 
 
----
-
-## After pasting
+# ✅ After updating
 Run:
 ```bash
 git add README.md
-git commit -m "Add README"
+git commit -m "Fix README formatting"
 git push
-
